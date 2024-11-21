@@ -1,0 +1,253 @@
+colunas_para_padronizar = ['VL_SLR_MSL_SQRT', 'VL_CST_SVR_LOG', 'QT_PRD_COM_BB_LOG', 'TMP_RLC_COM_BB']
+
+colunas_categoricas = ['EST_CVL', 'CLS_GNR', 'RGAO_GEO', 'SGM_CLI', 'CTGR_MC_EPGR', 'RAMO_MC_EPGR', 'NM_CTRA', 'FXA_IDD']
+
+['VL_SLR_MSL',
+ 'QT_PRD_COM_BB',
+ 'TMP_RLC_COM_BB',
+ 'VL_CST_SVR',
+ 'QT_RCLM_CLI',
+ 'PRI_ATDT_CLI',
+ 'CD_IN_RCLM_CLI',
+ 'CD_IN_SLR_MIN',
+ 'VL_SLR_MSL_SQRT',
+ 'VL_CST_SVR_LOG',
+ 'QT_PRD_COM_BB_LOG',
+ 'EST_CVL_CASADO',
+ 'EST_CVL_SEPARADO',
+ 'EST_CVL_SOLTEIRO',
+ 'EST_CVL_VIUVO',
+ 'CLS_GNR_F',
+ 'CLS_GNR_M',
+ 'RGAO_GEO_CENTRO-OESTE',
+ 'RGAO_GEO_NORDESTE',
+ 'RGAO_GEO_NORTE',
+ 'RGAO_GEO_SUDESTE',
+ 'RGAO_GEO_SUL',
+ 'SGM_CLI_1.0',
+ 'SGM_CLI_2.0',
+ 'SGM_CLI_3.0',
+ 'SGM_CLI_4.0',
+ 'CTGR_MC_EPGR_ATACADO',
+ 'CTGR_MC_EPGR_VAREJO',
+ 'RAMO_MC_EPGR_COMERCIO',
+ 'RAMO_MC_EPGR_INDUSTRIA',
+ 'RAMO_MC_EPGR_SERVICOS',
+ 'NM_CTRA_AGRO',
+ 'NM_CTRA_ESTILO_A',
+ 'NM_CTRA_ESTILO_B',
+ 'NM_CTRA_EXCLUSIVO_A',
+ 'NM_CTRA_EXCLUSIVO_B',
+ 'NM_CTRA_INVESTIDOR',
+ 'NM_CTRA_NEGOCIAL',
+ 'NM_CTRA_PERSONALIZADO',
+ 'NM_CTRA_PRIVATE',
+ 'FXA_IDD_10-19',
+ 'FXA_IDD_20-29',
+ 'FXA_IDD_30-39',
+ 'FXA_IDD_40-49',
+ 'FXA_IDD_50-59',
+ 'FXA_IDD_60-69',
+ 'FXA_IDD_70-79',
+ 'FXA_IDD_80-89',
+ 'FXA_IDD_90-max']
+
+# Dividindo os dados em treino e teste (30% para teste)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y,
+    test_size=0.3,
+    random_state=42,
+    shuffle=True
+)
+
+# Criando os DataFrames correspondentes
+exercicio11a = pd.DataFrame(X_train)	exercicio11a_imputed
+exercicio11b = pd.DataFrame(X_test)	exercicio11b_imputed
+exercicio11c = y_train
+exercicio11d = y_test
+
+exercicio12e = LogisticRegression()
+exercicio12e.fit(X_train, y_train.values.ravel())
+
+exercicio12f = DecisionTreeClassifier()
+exercicio12f.fit(X_train, y_train.values.ravel())
+
+exercicio12g = SVC()
+exercicio12g.fit(X_train, y_train.values.ravel()) 
+
+verificar:
+y_pred_svm = exercicio12g.predict(exercicio11b)
+
+e8c = f1_score(e8y_test, svc.predict(e8X_test))
+
+
+svc = exercicio12g
+
+exercicio12e = LogisticRegression()
+exercicio12e.fit(exercicio11a, exercicio11c)
+
+exercicio12f = DecisionTreeClassifier()
+exercicio12f.fit(exercicio11a, exercicio11c)  
+
+exercicio12g = SVC()
+exercicio12g.fit(exercicio11a, exercicio11c)  
+
+
+exercicio12
+Exemplo: salário e classe social;
+nível de instrução e se possui nível superior.  Esses exemplos são subconjuntos e usualmente possuem forte correlação.
+Se vc validou a 12 certamente é um defeito do validador.  Eu tiver que modificar minhas features para forçar dar regressão logística..
+
+
+Valores maiores que 1.0:
+VL_SLR_MSL
+QT_PRD_COM_BB
+VL_CST_SVR
+QT_RCLM_CLI (e tem campos nulos)
+
+
+
+Boa tarde, Rogério. A variável 12d deve conter o modelo. Não o score e não o nome, o modelo em si mesmo.
+Sim, não é vaga, é exatamente isso 😅 Ela deve conter o modelo. Seu melhor modelo, deve estar salvo nessa variável.
+
+LogisticRegression
+DecisionTreeClassifier
+SVC
+
+13
+
+b2a
+b2b
+b2c
+
+exercicio13a) Quantos foram os casos de falso positivo do seu modelo, ou seja, os casos em que o modelo previu que a pessoa sairia (churn), mas ela não saiu? A variável deve ser do tipo int ou float.
+
+
+
+O resultado do balanceamento dos dados de treinamento deve ser salvo nas variáveis exercicio14a e exercicio14b.
+
+exercicio14a : Dados de treino para as variáveis preditoras (X)
+exercicio14b : Dados de treino para a variável alvo (y)
+
+exercicio14c: Amostras da classe 0 antes do SMOTE: 3274
+exercicio14d: Amostras da classe 1 antes do SMOTE: 1273
+exercicio14e: Amostras da classe 0 após o SMOTE: 3274 
+exercicio14f: Amostras da classe 1 após o SMOTE: 3274
+
+exercicio11a = pd.DataFrame(X_train)
+exercicio11b = pd.DataFrame(X_test)
+exercicio11c = pd.DataFrame(y_train)
+exercicio11d = pd.DataFrame(y_test)
+exercicio11d : Dados de teste para as variável alvo (y)
+
+Dados de treino para as variáveis preditoras (X): {exercicio14a} 6548 registros com 21 colunas
+Dados de treino para a variável alvo (y): {exercicio14b}	 6548 registros com 1 coluna
+
+
+
+from sklearn.metrics import confusion_matrix
+
+# Supondo que 'melhor_modelo' tenha sido determinado anteriormente
+# e que você tenha um modelo treinado correspondente ao melhor modelo
+
+# Fazendo previsões no conjunto de teste com o modelo de melhor F1-score
+if exercicio15d == 'logreg':
+    y_pred_melhor = logreg.predict(X_test)
+elif exercicio15d == 'clf':
+    y_pred_melhor = clf.predict(X_test)
+else:  # 'svc'
+    y_pred_melhor = svc.predict(X_test)
+
+# Criando a matriz de confusão
+confusion = confusion_matrix(y_test, y_pred_melhor)
+
+# Extraindo os valores da matriz de confusão
+# A matriz de confusão tem a seguinte estrutura:
+# [[TN, FP],
+#  [FN, TP]]
+
+# Falsos positivos (FP)
+falsos_positivos = confusion[0, 1]
+
+# Falsos negativos (FN)
+falsos_negativos = confusion[1, 0]
+
+# Atribuindo os valores às variáveis
+exercicio15e = falsos_positivos
+exercicio15f = falsos_negativos
+
+# Exibindo os resultados
+print(f"Falsos Positivos: {exercicio15e}")
+print(f"Falsos Negativos: {exercicio15f}")
+
+------------------------------------------------------------------------------------
+Claydinei - Joseano Soares
+Os requisitos do exercicio foram atendidos? Ou seja:
+- Variáveis "13a" e "13b" numéricos, do tipo "int" ou float"?
+- Variável "13c" do tipo "str", com a letra da alternativa mais crítica?
+
+Sim.
+a e b int64, com o i minúsculo.
+c com o tipo str.
+
+Verifica se o type(...) das variáveis "13a" e "13b" aparecem como "numpy.int64" ou apenas "int".
+Se aparecer a primeira opção, tenta converter para a segunda.
+O meu validou da segunda forma.
+
+Faz esse teste perto do Boletim de Soluções.
+Verifica se você não alterou os valores e/ou os tipos acidentalmente em outros exercícios.
+
+
+
+exercicio12d
+
+-------------------------------
+exercicio15
+
+Matriz de Confusão com Dados Balanceados:
+[[1230  182]
+ [ 199  338]]
+
+Falsos Positivos (exercicio15e): 182
+Falsos Negativos (exercicio15f): 199
+
+O exercício 15e pede para retornar o número de falso positivo. A matriz de confusão retorna uma matriz 2x2 como esta:
+cm = [[VN, FP],
+      [FN, VP]]
+
+Você identifica o número de falsos positivos na posição [0, 1], ou seja, 
+falsos_positivos = cm[0, 1]. Confere se está retornando o número correto.
+
+--------------------------------------------------------------------------------
+Ex15, parte2
+Faça a Matriz de Confusão (confusion_matriz) do seu modelo de melhor F1-score com os dados balanceados pelo SMOTE, conforme resposta do Exercício 14, em seguida crie as variáveis exercicio15e, exercicio15f e para responder às perguntas:
+
+exercicio15e) Quantos foram os casos de falso positivo do seu modelo, ou seja, os casos em que o modelo previu que a pessoa sairia (churn), mas ela não saiu?
+
+exercicio15f) Quantos foram os casos de falso negativo?
+
+
+# Exibindo os resultados
+print(f"Dados de treino para as variáveis preditoras (X): {exercicio14a}")
+print(f"Dados de treino para a variável alvo (y): {exercicio14b}")
+print(f"Amostras da classe 0 antes do SMOTE: {exercicio14c}")    	Amostras da classe 0 antes do SMOTE: 3274
+print(f"Amostras da classe 1 antes do SMOTE: {exercicio14d}")		Amostras da classe 1 antes do SMOTE: 1273
+print(f"Amostras da classe 0 após o SMOTE: {exercicio14e}")		Amostras da classe 0 após o SMOTE: 3274
+print(f"Amostras da classe 1 após o SMOTE: {exercicio14f}")		Amostras da classe 1 após o SMOTE: 3274
+
+
+
+--------------------------------------------
+
+exercicio12d.fit(exercicio11a, exercicio11c.values.ravel())
+y_pred_melhor_0 = exercicio12d.predict(exercicio11b)
+regression_cm = metrics.confusion_matrix(y_pred_melhor_0, exercicio11d)
+
+
+exercicio12f = DecisionTreeClassifier()
+exercicio12f.fit(exercicio11a, exercicio11c.values.ravel())
+y_pred_logistic = exercicio12f.predict(exercicio11b)
+
+
+forest_y_pred = rf.predict(e8X_test)
+forest_cm = metrics.confusion_matrix(forest_y_pred, e8y_test)
