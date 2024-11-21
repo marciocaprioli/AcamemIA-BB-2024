@@ -1,0 +1,13 @@
+Tutoriais (utilizados como exemplo):
+
+https://learn.microsoft.com/pt-br/power-bi/visuals/power-bi-visualization-influencers?tabs=powerbi-service;
+
+https://learn.microsoft.com/pt-br/power-bi/visuals/power-bi-visualization-decomposition-tree;
+
+https://learn.microsoft.com/pt-br/power-bi/create-reports/insights;
+
+https://learn.microsoft.com/pt-br/power-bi/visuals/power-bi-visualization-smart-narrative.
+
+Cássia
+
+https://ds.bb.com.br/saiba-mais-sobre-dataviz/
