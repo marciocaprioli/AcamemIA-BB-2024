@@ -1,0 +1,86 @@
+data frame: acessos
+coluna hash_usuario = fq3se5xk
+as visitas estão na coluna identificador_visita
+o data frame possui somente uma coluna com o nome de data, contendo a data e horário da visita.
+Em qual período o cliente navega com maior frequência?
+# Regra 1: Considere os seguintes intervalos para classificação do horário:
+# • madrugada: das 00h00 às 05h59m59s
+# • manhã: das 06h00 às 11h59 m59s
+# • tarde: das 12h00 às 17h59 m59s
+# • noite: das 18h00 às 23h59 m59s
+
+# No exemplo acima, o cálculo deverá considerar as ocorrências únicas do período por visita 
+
+--------------------------------------------------------------------------
+DataFrame
+usuario_acessos = pd.DataFrame({
+    'identificador_visita': ['ejlbbvwu', 'ejlbbvwu', 'tfa1t4s7', 'tfa1t4s7', 'tfa1t4s7'],
+    'data': [
+        '2024-01-22 06:15:07',
+        '2024-01-22 06:17:42',
+        '2024-02-23 11:55:18',
+        '2024-02-23 11:57:51',
+        '2024-01-22 06:15:24',
+         ]
+}) 
+
+
+Com base no Dataframe acima,
+--------------------------------------------------------------------------
+
+
+
+
+# Regra 2: a resposta deverá obedecer à seguinte classificação: manhã, tarde, noite ou madrugada. 
+# Regra 3: em caso de empate, considere o maior horário, obedecendo à seguinte escala: madrugada < manhã < tarde < noite
+
+
+15 a 22
+dataframe: acessos
+página do produto: coluna pagina_acessada, contendo os textos: central_pagamentos, confirmacao_boleto, detalhes_pagamento, pagamento, sucesso_boleto
+as visitas estão na coluna identificador_visita
+o data frame possui somente uma coluna com o nome de data, contendo a data e horário da visita.
+No total, quantas vezes as páginas do produto designado foram acessadas?
+# Regra: considere todos os registros de acesso a todas as página do produto.
+# Deverão ser considerados todos os registros referentes ao produto de todos os usuários constantes no dataframe acessos
+
+2)
+dataframe: filtro_produto
+as visitas e visualizações estão na coluna identificador_visita
+dispositivo: coluna info_dispositivo
+o data frame possui somente uma coluna com o nome de data, contendo a data e horário da visita ou acesso 
+Qual tipo de dispositivo gera mais visualizações para o produto?
+# Regra: para o cálculo, considere o dispositivo com maior quantidade de visitas únicas onde houver ao menos um registro de acesso a uma das páginas do produto.
+
+
+3)
+dataframe: acessos
+as visitas estão na coluna identificador_visita
+dispositivo: coluna info_dispositivo
+o data frame possui somente uma coluna com o nome de data, contendo a data e horário da visita ou acesso
+
+
+22)
+filtro_produto: 224432
+visitas_pre_conversao: 55674
+visitas_sem_conversao: 12952
+total_visitas_pre_conversao: 32110
+taxa_abandono: 0.4
+
+
+26)
+acessos: 1048575
+visitas_moveis: 738757
+visitas_desktop: 309818
+
+total_visitas_moveis: 219520
+total_visitas_desktop: 100900
+total_visitas: 320420
+
+
+20) 27267, sendo 25265 True
+		  2002 False
+
+
+28) acessos em Setembro/2024: 4529
+
